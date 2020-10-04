@@ -1,0 +1,16 @@
+App\Entity\Translation:
+    type: entity
+    id:
+        language:
+            associationKey: true
+        entry:
+            associationKey: true
+    manyToOne:
+        language:
+            targetEntity: Language
+        entry:
+            targetEntity: Entry
+            inversedBy: translations
+    fields:
+        translation:
+            type: text

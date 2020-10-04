@@ -1,0 +1,16 @@
+App\Entity\Entry:
+    type: entity
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    oneToMany:
+        translations:
+            targetEntity: Translation
+            mappedBy: entry
+            cascade: ["persist"]
+    fields:
+        name:
+            type: string
+            length: 200

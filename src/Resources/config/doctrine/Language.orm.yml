@@ -1,0 +1,14 @@
+App\Entity\Language:
+    type: entity
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 200
+        rtl:
+            type: boolean
+            length: 200
