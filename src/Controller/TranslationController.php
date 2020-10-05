@@ -9,6 +9,7 @@ use App\Entity\Translation;
 use App\Form\Type\CreateTranslationType;
 use App\Form\Type\UpdateTranslationType;
 use App\Repository\EntryRepository;
+use Exception;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -74,7 +75,7 @@ class TranslationController
 
             try {
                 $entryRepo->save($entry);
-            } catch (\Exception $exception) {
+            } catch (Exception $exception) {
                 throw new ServiceUnavailableHttpException(null, 'Failed to save');
             }
 
@@ -113,7 +114,7 @@ class TranslationController
 
             try {
                 $entryRepo->save($entry);
-            } catch (\Exception $exception) {
+            } catch (Exception $exception) {
                 throw new ServiceUnavailableHttpException(null, 'Failed to save');
             }
 

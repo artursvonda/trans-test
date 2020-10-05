@@ -2,9 +2,6 @@
 
 namespace App\Entity;
 
-use App\Repository\TranslationRepository;
-use Doctrine\ORM\Mapping as ORM;
-
 class Translation
 {
     private $id;
@@ -12,9 +9,6 @@ class Translation
     private $translation;
     private $entry;
 
-    /**
-     * Translation constructor.
-     */
     public function __construct(Entry $entry, Language $language, string $translation)
     {
         $this->language = $language;

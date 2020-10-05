@@ -2,9 +2,7 @@
 
 namespace App\Entity;
 
-use App\Repository\EntryRepository;
 use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\ORM\Mapping as ORM;
 
 class Entry
 {
